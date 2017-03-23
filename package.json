@@ -1,18 +1,18 @@
 {
-  "name": "react-slick",
-  "version": "0.12.0",
-  "description": " React port of slick carousel",
+  "name": "@vevo/vevo-slick",
+  "version": "0.12.1",
+  "description": "Vevo fork of react slick",
   "main": "./lib",
   "scripts": {
     "start": "gulp server",
     "prepublish": "babel ./src --out-dir ./lib && gulp dist",
     "test": "karma start --single-run"
   },
-  "author": "Kiran Abburi",
+  "author": "Kiran Abburi & Vevo TV team",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/akiran/react-slick"
+    "url": "https://github.com/vevo/vevo-slick"
   },
   "keywords": [
     "slick",
@@ -69,7 +69,7 @@
     "react": "^0.14.0 || ^15.0.1",
     "react-dom": "^0.14.0 || ^15.0.1"
   },
-  "npmName": "react-slick",
+  "npmName": "@vevo/vevo-slick",
   "npmFileMap": [
     {
       "basePath": "/dist/",
@@ -79,7 +79,7 @@
     }
   ],
   "bugs": {
-    "url": "https://github.com/akiran/react-slick/issues"
+    "url": "https://github.com/vevo/vevo-slick/issues"
   },
-  "homepage": "https://github.com/akiran/react-slick"
+  "homepage": "https://github.com/vevo/vevo-slick"
 }
