@@ -1,5 +1,5 @@
 {
-  "name": "vevo-slick",
+  "name": "@vevo/vevo-slick",
   "version": "0.14.7",
   "description": "Vevo's fork of vevo-slick",
   "main": "./lib",
