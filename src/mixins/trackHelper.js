@@ -22,11 +22,20 @@ export var getTrackCSS = function(spec) {
     trackWidth = (spec.slideCount + 2*spec.slidesToShow) * spec.slideWidth;
   }
 
+  var translateMethod, tz;
+  if (spec.useTranslate3d) {
+    translateMethod = 'translate3d';
+    tz = ', 0px';
+  } else {
+    translateMethod = 'translate';
+    tz = '';
+  }
+
   var style = {
     opacity: 1,
     width: trackWidth,
-    WebkitTransform: 'translate(' + spec.left + 'px, 0px)',
-    transform: 'translate(' + spec.left + 'px, 0px)',
+    WebkitTransform: translateMethod + '(' + spec.left + 'px, 0px' + tz + ')',
+    transform: translateMethod + '(' + spec.left + 'px, 0px' + tz + ')',
     transition: '',
     WebkitTransition: '',
     msTransform: 'translateX(' + spec.left + 'px)'
