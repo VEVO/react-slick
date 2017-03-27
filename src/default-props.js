@@ -38,6 +38,7 @@ var defaultProps = {
     edgeEvent: null,
     init: null,
     swipeEvent: null,
+    useTranslate3d: true,
     // nextArrow, prevArrow are react componets
     nextArrow: null,
     prevArrow: null
