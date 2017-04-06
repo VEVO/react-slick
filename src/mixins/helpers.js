@@ -29,7 +29,7 @@ var helpers = {
       }, props, this.state));
       // getCSS function needs previously set state
       var trackStyle = getTrackCSS(assign({left: targetLeft}, props, this.state));
-
+      console.log(trackStyle)
       this.setState({trackStyle: trackStyle});
 
       this.autoPlay(); // once we're set up, trigger the initial autoplay.

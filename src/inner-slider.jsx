@@ -11,6 +11,8 @@ import {Track} from './track';
 import {Dots} from './dots';
 import {PrevArrow, NextArrow} from './arrows';
 
+var dontrender = 'hidden'
+
 export var InnerSlider = React.createClass({
   mixins: [HelpersMixin, EventHandlersMixin],
   getInitialState: function () {
@@ -20,6 +22,7 @@ export var InnerSlider = React.createClass({
     return defaultProps;
   },
   componentWillMount: function () {
+    console.log('CWM')
     if (this.props.init) {
       this.props.init();
     }
@@ -41,6 +44,8 @@ export var InnerSlider = React.createClass({
   },
   componentDidMount: function componentDidMount() {
     // Hack for autoplay -- Inspect Later
+    dontrender = 'nothing'
+    console.log('CDM')
     this.initialize(this.props);
     this.adaptHeight();
     if (window.addEventListener) {
@@ -67,6 +72,7 @@ export var InnerSlider = React.createClass({
           currentSlide: this.state.currentSlide
       });
     } else {
+      console.log(this.update)
       this.update(nextProps);
     }
   },
@@ -77,7 +83,8 @@ export var InnerSlider = React.createClass({
     this.update(this.props);
   },
   render: function () {
-    var className = classnames('slick-initialized', 'slick-slider', this.props.className);
+    console.log('render', dontrender)
+    var className = classnames('slick-initialized', 'slick-slider', dontrender, this.props.className);
 
     var trackProps = {
       fade: this.props.fade,

@@ -450,19 +450,6 @@ var App = React.createClass({
     return (
       <div className='content'>
         <SingleItem />
-        <MultipleItems />
-        <Responsive />
-        <UnevenSets />
-        <CenterMode />
-        <CenterModeWithInitial />
-        <AutoPlay />
-        <PauseOnHover />
-        <Rtl />
-        <VariableWidth />
-        <AdaptiveHeight />
-        <LazyLoad />
-        <Fade />
-        <SlickGoTo />
       </div>
     );
   }
