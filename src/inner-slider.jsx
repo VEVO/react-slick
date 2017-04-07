@@ -23,6 +23,11 @@ export var InnerSlider = React.createClass({
     if (this.props.init) {
       this.props.init();
     }
+    if (this.props.useLightSlick) {
+      this.counter = 0;
+      this.show = 'hidden';
+    }
+
     this.setState({
       mounted: true
     });
@@ -77,7 +82,14 @@ export var InnerSlider = React.createClass({
     this.update(this.props);
   },
   render: function () {
-    var className = classnames('slick-initialized', 'slick-slider', this.props.className);
+    var className
+    if (this.props.useLightSlick) {
+      this.counter++;
+      if (this.counter > 2) this.show = '';
+      className = classnames('slick-initialized', 'slick-slider', this.show, this.props.className);
+    } else {
+      className = classnames('slick-initialized', 'slick-slider', this.props.className);
+    }
 
     var trackProps = {
       fade: this.props.fade,
